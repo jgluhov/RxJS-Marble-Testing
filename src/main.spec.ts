@@ -50,3 +50,16 @@ describe('#filterChars()', () => {
         expect(main.filterChars(chars$, 'c')).toBeObservable(expected$);
     })
 })
+
+describe('#debounceOut()', () => {
+    it('should output only last value', () => {
+        const values = helpers.generateAlphabet();
+        const scheduler = getTestScheduler();
+
+        const chars$ = cold('--abcd-e', values);
+        const ms = 10;
+        const expected$ = cold('------d-e', values);
+
+        expect(main.debounceOut(chars$, ms, scheduler)).toBeObservable(expected$);
+    });
+});
