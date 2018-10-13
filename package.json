@@ -1,0 +1,26 @@
+{
+  "name": "RxJS-Marble-Testing",
+  "version": "1.0.0",
+  "description": "RxJS-Marble-Testing",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jasmine": "^2.8.9",
+    "jasmine": "^3.2.0",
+    "nodemon": "^1.18.4"
+  },
+  "scripts": {
+    "test": "nodemon --exec jasmine --config=jasmine.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgluhov/RxJS-Marble-Testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgluhov/RxJS-Marble-Testing/issues"
+  },
+  "homepage": "https://github.com/jgluhov/RxJS-Marble-Testing#readme"
+}
