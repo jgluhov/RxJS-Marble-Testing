@@ -1,5 +1,5 @@
 import { Observable, Scheduler, asyncScheduler } from 'rxjs';
-import { scan, delay } from 'rxjs/operators';
+import { scan, delay, filter } from 'rxjs/operators';
 
 export const sum = (numbers$: Observable<number>) => {
     return numbers$.pipe(
@@ -14,5 +14,13 @@ export const delayedSum = (
 ) => {
     return sum(input$).pipe(
         delay(ms, scheduler)
+    );
+}
+
+export const filterChars = (chars$: Observable<string>, borderChar: string) => {
+    return chars$.pipe(
+        filter((char: string) => {
+            return char > borderChar;
+        })
     );
 }
