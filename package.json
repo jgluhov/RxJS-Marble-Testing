@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "RxJS-Marble-Testing",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "rxjs": "^6.3.3"
+  },
   "devDependencies": {
     "@types/jasmine": "^2.8.9",
+    "@types/rx": "^4.1.1",
     "jasmine": "^3.2.0",
+    "jasmine-marbles": "^0.4.0",
     "nodemon": "^1.18.4"
   },
   "scripts": {
